@@ -25,10 +25,10 @@ Users should be able to:
 ### Preview
 
 Desktop View of the UI Design
-![](../completedDesign/Desktop.png)
+![](./src/assets/completedDesign/Desktop.png)
 
 Mobile View of the UI Design<br>
-![](../completedDesign/Mobile.png)
+![](./src/assets/completedDesign/Mobile.png)
 
 
 

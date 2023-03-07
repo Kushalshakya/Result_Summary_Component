@@ -1,0 +1,207 @@
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+*{
+    margin : 0;
+    padding : 0;
+}
+@font-face{
+    font-family : Hanken;
+    src : url(./assets/fonts/Hanken.ttf);
+}
+:root{
+    /* Primary */
+    --lightRed: hsl(0, 100%, 67%);
+    --orangeYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    /* Background */
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue : hsl(241, 81%, 54%);
+    /* Circle */
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0); 
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+
+    --paragraph : 18px;
+}
+
+body{
+    font-family : Hanken;
+    background-color : var(--paleBlue);
+    width : 100%;
+    height : 100vh;
+}
+p{
+    font-size : var(--paragraph);
+}
+ul{
+    list-style: none;
+}
+#app-main{
+    display : flex;
+    height : 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.app-wrapper{
+    background-color : var(--white);
+    width : 50%;
+    height : 70vh;
+    border-radius : 30px;
+    box-shadow: 4px 4px 6px rgba(0,0,0,0.3);
+}
+.container-app{
+    display : flex;
+    flex-direction: row;
+    height : 70vh;
+}
+.result-app{
+    width : 50%;
+    background-image : linear-gradient(var(--lightSlateBlue),var(--lightRoyalBlue));
+    border-radius : 30px;
+    text-align : center;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result-app h2{
+    color : var(--lightLavender);
+    font-size : 20px;
+    margin : 40px 0px;
+}
+.result-app .count{
+    width : 150px;
+    height : 150px;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image : linear-gradient(var(--violetBlue),var(--persianBlue));
+    border-radius : 50%;
+}
+.count h4{
+    font-size : 50px;
+    color : var(--white);
+}
+.count h5{
+    font-size : 16px;
+    color : var(--lightLavender);
+    font-weight : 500;
+}
+.result-app h1{
+    font-size : 30px;
+    font-weight : 600;
+    color :var(--white);
+    margin : 25px 0px;
+}
+.result-app p{
+    color : var(--paleBlue);
+}
+
+
+.summary-app{
+    width : 50%;
+    background-color : var(--white);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.summary-app h2{
+    font-size : 22px;
+    margin : 30px 20px;
+    color : var(--darkGrayBlue);
+}
+.summary-app ul li{
+    padding : 15px 10px;
+    display : flex;
+    background-color: var(--paleBlue);
+    justify-content: space-between;
+    border-radius : 12px;
+}
+.summary-app ul li .option1 span{
+    margin-left : 10px;
+}
+.summary-app ul li:nth-child(1) .option1 span{
+    color: var(--lightRed);
+}.summary-app ul li:nth-child(2) .option1 span{
+    color: var(--orangeYellow);
+}.summary-app ul li:nth-child(3) .option1 span{
+    color: var(--greenTeal);
+}.summary-app ul li:nth-child(4) .option1 span{
+    color: var(--cobaltBlue);
+}
+.summary-app .option1{
+    display: flex;
+    align-items: center;
+    font-size : 16px;
+    font-weight : 500;
+}
+.summary-app .option2 h3{
+    font-size : 16px;
+    color : var(--darkGrayBlue);
+}
+
+.summary-app ul li .option2 span{
+    color : var(--lightLavender);
+}
+.summary-app ul{
+    display : flex;
+    margin : auto;
+    width : 90%;
+    gap : 20px;
+    flex-direction: column;
+}
+.summary-app button{
+    padding : 14px 0px;
+    font-family : Hanken;
+    font-size : 20px;
+    border-radius : 40px;
+    border : none;
+    outline : none;
+    background-color: var(--darkGrayBlue);
+    color : var(--paleBlue);
+    transition : all 2s ease-in-out;
+}
+.summary-app button:hover{
+    color : var(--white);
+    background-image: linear-gradient(var(--lightSlateBlue),var(--lightRoyalBlue));
+    cursor : pointer;
+    border : none;
+    outline : none;
+}
+
+@media (max-width : 768px){
+    #app-main{
+        align-items: start;
+    }
+    .app-wrapper{
+        width : 100%;
+        flex-direction: column;
+        /* height : 100vh; */
+    }
+    .container-app{
+        flex-direction: column;
+    }
+    .result-app{
+        width : 100%;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        padding-bottom : 40px;
+    }
+    .summary-app{
+        width : 100%;
+        padding-bottom : 40px;
+    }
+}
+@media (min-width : 768px) AND (max-width : 1011px){
+    .app-wrapper{
+        width : 75%;
+    }
+}
